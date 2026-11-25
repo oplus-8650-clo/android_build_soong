@@ -40,6 +40,7 @@ const (
 var sisoStringVars = []string{
 	"JAVA_HOME",
 	"OUT_DIR",
+	"RBE_WRAPPER",
 	"RBE_container_image",
 	"RELEASE_BUILD_CLANG_VERSION",
 }

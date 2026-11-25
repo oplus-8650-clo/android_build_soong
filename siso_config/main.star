@@ -27,10 +27,11 @@ def __handlers(ctx, vars, handlers):
 
 def __step_config(ctx, vars, step_config):
     if vars.use_reclient:
+        rewrapper = vars.RBE_WRAPPER or "prebuilts/remoteexecution-client/live//rewrapper"
         step_config["rules"].extend([
             {
                 "name": "rewrapper",
-                "command_prefix": "prebuilts/remoteexecution-client/live//rewrapper ",
+                "command_prefix": rewrapper + " ",
                 "timeout": "2m",
                 "use_remote_exec_wrapper": True,
             },
