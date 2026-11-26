@@ -99,6 +99,36 @@ def __step_config(ctx, vars, step_config):
                 "use_remote_exec_wrapper": True,
                 # "debug": True,
             },
+            {
+                "name": "g.cc.ld",
+                "action": "g.cc.ldRE",
+                "timeout": "2m",
+                "use_remote_exec_wrapper": True,
+            },
+            {
+                "name": "g.cc.partialLd",
+                "action": "g.cc.partialLdRE",
+                "timeout": "2m",
+                "use_remote_exec_wrapper": True,
+            },
+            {
+                "name": "g.cc.clangTidy",
+                "action": "g.cc.clangTidyRE",
+                "timeout": "2m",
+                "use_remote_exec_wrapper": True,
+            },
+            {
+                "name": "g.cc.sAbiDump",
+                "action": "g.cc.sAbiDumpRE",
+                "timeout": "2m",
+                "use_remote_exec_wrapper": True,
+            },
+            {
+                "name": "g.cc.sAbiLink",
+                "action": "g.cc.sAbiLinkRE",
+                "timeout": "2m",
+                "use_remote_exec_wrapper": True,
+            },
         ])
         return step_config
 
